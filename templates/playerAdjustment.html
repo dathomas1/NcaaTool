@@ -1,0 +1,131 @@
+<html lang="en">
+	<head>
+		<title>My NCAA Dynasty Tool - Player Adjustments</title>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  		<script src="../static/utility.js"></script>
+	</head>
+	<body>
+		<button id="addAdjustment">Add Adjustment</button>
+		<br>
+		<div class="adjustList accordion">
+			<h3>Adjustment ##PH## <input type="button" value="Copy"><input type="button" value="Delete"></h3>
+			<div class="adjustment accordion">
+				<h4>Filters</h4>				
+				<div class="filter accordion">
+					<h5>Positions</h5>
+					<div>
+						<legend>Backs and Receivers: </legend>
+						<fieldset>
+							<label for="qb-filter">QB
+						    	<input type="checkbox" name="qb-filter" class="qb-filter">
+						    </label>
+						    <label for="hb-filter">HB
+						    	<input type="checkbox" name="hb-filter" class="hb-filter">
+						    </label>
+						    <label for="fb-filter">FB
+						    	<input type="checkbox" name="fb-filter" class="fb-filter">
+						    </label>
+						    <label for="te-filter">TE
+						    	<input type="checkbox" name="te-filter" class="te-filter">
+						    </label>
+						    <label for="wr-filter">WR
+						    	<input type="checkbox" name="wr-filter" class="wr-filter">
+						    </label>
+						</fieldset>
+					</div>
+					<h5>Year</h5>
+					<div>
+						<fieldset>
+							<label for="year1-filter">Freshmen
+						    	<input type="checkbox" name="year1-filter" class="year1-filter">
+						    </label>
+						    <label for="year2-filter">Sophomore
+						    	<input type="checkbox" name="year2-filter" class="year2-filter">
+						    </label>
+						    <label for="year3-filter">Junior
+						    	<input type="checkbox" name="year3-filter" class="year3-filter">
+						    </label>
+						    <label for="year4-filter">Senior
+						    	<input type="checkbox" name="year4-filter" class="year4-filter">
+						    </label>
+						</fieldset>
+						<br>
+						<label for="redshirt-filter">Include Redshirts
+					    	<input type="checkbox" name="redshirt-filter" class="redshirt-filter">
+					    </label>
+					</div>
+					<h5>Teams</h5>
+					<div>
+						Air Force
+					</div>
+					<h5>Advance</h5>
+					<div class="adv-filter-list">
+						<div class="adv-filter-controlgroup">
+							<label for="field">Select field</label>
+							<select class="field">
+								<optgroup label="Attributes">
+									<option>Speed</option>
+									<option>Strength</option>
+									<option>Height</option>
+								</optgroup>
+								<optgroup label="Equipment">
+									<option>Helmet</option>
+									<option>Facemask</option>
+								</optgroup>
+								<optgroup label="Appearance">
+									<option>Face</option>
+									<option>Arm Size</option>
+									<option>Waist Size</option>
+								</optgroup>
+							</select>
+							<select class="condition">
+								<option>Equals</option>
+								<option>Less Than</option>
+								<option>Greater Than</option>
+								<option>Not Equal</option>
+								<option>Contains</option>
+							</select>
+							<input class="adv-filter-value" type="text">
+							<button>Remove</button>
+						</div>
+						<div class="adv-filter-controlgroup">
+							<label for="field">Select field</label>
+							<select class="field">
+								<optgroup label="Attributes">
+									<option>Speed</option>
+									<option>Strength</option>
+									<option>Height</option>
+								</optgroup>
+								<optgroup label="Equipment">
+									<option>Helmet</option>
+									<option>Facemask</option>
+								</optgroup>
+								<optgroup label="Appearance">
+									<option>Face</option>
+									<option>Arm Size</option>
+									<option>Waist Size</option>
+								</optgroup>
+							</select>
+							<select class="condition">
+								<option>Equals</option>
+								<option>Less Than</option>
+								<option>Greater Than</option>
+								<option>Not Equal</option>
+								<option>Contains</option>
+							</select>
+							<input class="adv-filter-value" type="text">
+							<button>Remove</button>
+						</div>
+						<button class="addFilter">Add Filter</button>
+					</div>
+				</div>
+
+				<h4>Edit</h4>
+				<div class="edit accordion">
+					Attribute Condition Value
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
