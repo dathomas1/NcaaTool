@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Web Development Playbook</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- This is a comment -->
+
+<!-- This is a multi-line comment with the html boilerplate
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My Title</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.ico" />
+    <style>
+      body {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+</html>
+
+-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+<img id="banner" src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png" alt="Placeholder logo banner">
+
+<p>This is a vanilla HTML and CSS playbook. Click this <a href="https://www.codeply.com/go/ZSzELsqrsU">link</a> for a Bootstrap 4 Playbook</p>
+
+<br>
+
+<h1>This is a h1 heading</h1>
+<h2>This is a h2 heading</h2>
+<h3>This goes already down to h6</h3>
+<h4>Don't use headings for style</h4>
+
+<!-- This is line break -->
+<br>
+
+This is a horizontal rule
+<hr>
+
+This is a styled horizontal rule
+<hr id="styled-hr">
+
+<p>This is a paragraph. You can <em>Emphasis</em> key points. You can make them stand out with <strong>Strong Text</strong>.</p>
+
+<p>Don't use <i>italic</i> and <b>bold</b> since they only style text.</p>
+
+<div class="centered border-div line-height">
+  <h3>CSS Styled Text</h3>
+  <hr>
+  <p>Centered using margin: 0 auto;</p>
+  <p>With 2.5em line-height</p>
+  <p class="italic-type">This is italic text.</p>
+  <p class="bold-type">This is bold text with a <span id="decor">span decorator</span>.</p>
+  <p class="tall-type">This is 20px size text.</p>
+</div>
+
+<div class="advanced-style">
+  <h3>Advanced Style Class</h3>
+  <hr>
+  <a href="#">A Link</a>
+  <p>With 2.5em line-height</p>
+  <p class="italic-type">This is italic text.</p>
+  <p class="bold-type">This is bold text with a <span id="decor">span decorator</span>.</p>
+  <p class="tall-type">This is 20px size text.</p>
+</div>
+
+<a href="www.google.com" target="_blank">A Link to Google in new window</a>
+<br>
+<a href="mailto:m.bluth@example.com">Email</a>
+<br>
+<a href="tel:+123456789">Phone</a>
+
+<br>
+
+This an unordered list
+<ul class="project-tile">
+  <li>Bible Verse Generator</li>
+  <li>Markdown Previewer</li>
+  <li>Javascript Calculator</li>
+</ul>
+
+This an ordered list
+<ol class="project-tile">
+  <li>Bible Verse Generator</li>
+  <li>Markdown Previewer</li>
+  <li>Javascript Calculator</li>
+</ol>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th colspan="2">The table header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>The table body</td>
+      <td>with two columns</td>
+    </tr>
+    <tr>
+      <td>The table body</td>
+      <td>with two columns</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+      </td>
+  </tfoot>
+</table>
+
+<br>
+
+<!-- Form with fieldset, legend, and label -->
+<form action="" method="post">
+  <label for="name">Name (4 to 8 characters):</label>
+
+  <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10">
+  <fieldset>
+    <legend>Title</legend>
+    <input type="radio" name="radio" id="radio">
+    <label for="radio">Click me</label>
+  </fieldset>
+</form>
+
+<h2>CSS Float Property</h2>
+<img src="https://via.placeholder.com/150" alt="150 pixel placeholder" class="img-placeholder" />
+<h3>Header</h3>
+<p>This is some text that has multiple lines if I keep typing this very, very long and winding sentence. It still is not quite two lines yet; however, I will keep typing until I reach my destination. <em>And do not use CSS float for positioning, but for wrapping text around an element.</em></p>
+
+<h2>Top, Middle, and Bottom Container Class</h2>
+<div class="top-container">
+  <p>My top container text is here in this div. We added 20px of padding and a 10px border.</p>
+</div>
+<div class="middle-container">
+  <p>A 20px border</p>
+</div>
+<div class="bottom-container">
+  <p>A 10px border</p>
+</div>
+
+<h2>Red, Blue, and Yellow Container Class</h2>
+<div class="red"></div>
+<div class="blue"></div>
+<div class="yellow"></div>
+
+<!-- 
+Demostrating absolute positioning.
+Parent must have relative position
+-->
+<h2>Absolute Container Class</h2>
+<div class="absolute-container">
+  <div class="crimson">
+    absolute position
+  </div>
+  <div class="navy">
+    absolute position
+  </div>
+  <div class="gold">
+    absolute position
+  </div>
+</div>
+
+<h2>Box-Container Class (#box-container)</h2>
+<div id="box-container">
+  <div id="box-1">Display Flex</div>
+  <div id="box-2">Display Flex</div>
+</div>
+
+<h2>Another-Container Class</h2>
+<div id="another-container">
+  <div id="box-3">Display Flex space-around</div>
+  <div id="box-4">Display Flex. Justify Content space-around</div>
+</div>
+
+<h2>Box-Container1 Class</h2>
+<div id="box-container1">
+  <div id="box-5">Display Flex Align-items: center</div>
+  <div id="box-6">Display Flex.</div>
+</div>
+
+<h2>Box-Container2 Class</h2>
+<div id="box-container2">
+  <div id="box-11">Flex-Wrap: wrap</div>
+  <div id="box-12">wrap</div>
+  <div id="box-13">wrap</div>
+  <div id="box-14">wrap</div>
+  <div id="box-15">wrap</div>
+  <div id="box-16">wrap</div>
+</div>
+
+<h2>Box-Container5 Class</h2>
+<div id="box-container5">
+  <div id="box-21">Flex Shorhand</div>
+  <div id="box-22"></div>
+</div>
+
+<h2>Box-Container6 Class</h2>
+<div id="box-container6">
+  <div id="box-31">Align-Self Center</div>
+  <div id="box-32">Align-Self Flex-End</div>
+</div>
+
+<h2>Display: Grid (Containerd Class)</h2>
+<div class="containerd">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+<h2>Grid Units (Containere Class)</h2>
+<div class="containere">
+  <div class="d1">1</div>
+  <div class="d2">2</div>
+  <div class="d3">3</div>
+  <div class="d4">4</div>
+  <div class="d5">5</div>
+</div>
+
+<h2>Grid Column on Item (Containerg Class)</h2>
+<div class="containerg">
+  <div class="item1">1</div>
+  <div class="item2">2</div>
+  <div class="item3">3</div>
+  <div class="item4">4</div>
+  <div class="item5">
+    grid-column: 2 / 4;
+    <br>
+    grid-row: 2 / 4;
+  </div>
+</div>
+
+<h2>Grid Areas (Containerh Class)</h2>
+<div class="containerh">
+  <div class="item10">
+    grid-area: footer
+  </div>
+  <div class="item11">11</div>
+  <div class="item12">12</div>
+  <div class="item13">13</div>
+  <div class="item14">14</div>
+  <div class="item15">
+    grid-area: content
+  </div>
+</div>
+
+<h2>Grid Areas without Reference (Containeri Class)</h2>
+<div class="containeri">
+  <div class="item21">21</div>
+  <div class="item22">22</div>
+  <div class="item23">23</div>
+  <div class="item24">24</div>
+  <div class="item25">
+    grid-area:
+    <br>
+    h-start (3) / v-start (2) / h-end (4) / v-end (4)
+  </div>
+</div>
+
+<h2>CSS Grid with Flexible Layout (Containerj, k, m Class)</h2>
+<h3>Auto-fill, none, Auto-fit</h3>
+<div class="containerj">
+  <div class="item31">31</div>
+  <div class="item32">32</div>
+  <div class="item33">33</div>
+  <div class="item34">34</div>
+  <div class="item35">35</div>
+</div>
+
+<div class="containerk">
+  <div class="item31">31</div>
+  <div class="item32">32</div>
+  <div class="item33">33</div>
+  <div class="item34">34</div>
+  <div class="item35">35</div>
+</div>
+<div class="containerm">
+  <div class="item31">31</div>
+  <div class="item32">32</div>
+  <div class="item33">33</div>
+  <div class="item34">34</div>
+  <div class="item35">35</div>
+</div>
+
+<h2>Media Query affecting Grid Layout (site-container Class)</h2>
+<div class="site-container">
+  <div class="site-item1">header</div>
+  <div class="site-item2">advert</div>
+  <div class="site-item3">
+    <div class="content-header">content</div>
+    <div class="site-itemOne">paragraph1</div>
+    <div class="site-itemTwo">paragraph2</div>
+  </div>
+  <div class="site-item4">footer</div>
+</div>
+
+<h2>Wave in SVG</h2>
+<div class="wave1">
+  <svg viewBox="0 0 1000 200" id="wave">
+    <path d="M 0 400 Q 200 550 550 350 Q 800 200 1000 250 L 1000 0 L 0 0 Z" fill="black">
+    </path>
+  </svg>
+</div>
+<div class="wave2">
+  <svg viewBox="0 0 1440 120" id="wave">
+    <path d="M1440,21.2101911 L1440,120 L0,120 L0,21.2101911 C120,35.0700637 240,42 360,42 C480,42 600,35.0700637 720,21.2101911 C808.32779,12.416393 874.573633,6.87702029 918.737528,4.59207306 C972.491685,1.8109458 1026.24584,0.420382166 1080,0.420382166 C1200,0.420382166 1320,7.35031847 1440,21.2101911 Z">
+    </path>
+  </svg>
+</div>
+
+<h2>Wave from Geek Wave3</h2>
+<p>https://www.geeksforgeeks.org/how-to-create-a-wave-image-for-a-background-using-html-and-css/</p>
+<div class="wave3">
+
+  <!-- Creating a SVG image -->
+  <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
+
+    <path d="M0, 100 C150, 200 350, 
+                0 500, 100 L500, 00 L0, 0 Z" style="stroke:none; fill:dodgerblue;">
+    </path>
+  </svg>
+</div>
+
+<h2>Wave4</h2>
+<div class="container--wave4">
+  <div class="wave4">
+    <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" style="z-index: -2;">
+
+      <path d="M0, 100 C150, 200 350, 
+                0 500, 100 L500, 00 L0, 0 Z" style="stroke: none;  
+                fill:rgba(30, 144, 225, 0.5);">
+      </path>
+    </svg>
+  </div>
+
+  <div class="wave4">
+    <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" style="z-index:-1;">
+
+      <path d="M0, 80 C300, 0 400,  
+                300 500, 50 L500, 00 L0, 0 Z" style="stroke: none;  
+                fill:rgba(153, 50, 204, 0.5);">
+      </path>
+    </svg>
+  </div>
+
+  <div class="wave4">
+    <svg viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet" style="z-index:-3;">
+
+      <path d="M0, 100 C150, 300 350, 
+                0 500, 100 L500, 00 L0, 0 Z" style="stroke: none;  
+                fill:rgba(220, 20, 60, 0.5);">
+      </path>
+    </svg>
+  </div>
+</div>
+
+<h2>Penguin in CSS</h2>
+<div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

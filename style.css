@@ -1,0 +1,793 @@
+/*
+This is a CSS comment
+*/
+
+/*
+Override default properties to make page flush with viewport edges
+*/
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: #444444;
+  text-align: center;
+}
+
+h2, em  {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  clear: both;
+}
+
+/* scale images to window width */
+img {
+  max-width: 100%;
+}
+
+.italic-type {
+  font-style: italic;
+}
+
+.bold-type {
+  font-weight: bold;
+}
+
+.tall-type {
+  font-size: 20px;
+}
+
+.centered {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.border-div {
+  background: url(https://i.imgur.com/MJAkxbh.png);
+  border: 3px solid gray;
+  padding: 0 10px;
+}
+
+.advanced-style {
+  margin: 2.5rem auto;
+  padding: 1rem;
+  border-radius: .75rem;
+  /* The border shorthand CSS property sets an element's border. It sets the values of border-width, border-style, and border-color. */
+  border: .2rem solid black;
+  /* The box-shadow property takes values for offset-x (how far to push the shadow horizontally from the element), offset-y (how far to push the shadow vertically from the element), blur-radius, spread-radius and a color value, in that order. The blur-radius and spread-radius values are optional. */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  max-width: 600px;
+}
+
+.advanced-style a {
+  color: #222;
+}
+
+.advanced-style a:hover {
+  color: #aaa;
+}
+
+.line-height {
+  line-height: 2.5;
+}
+
+.img-placeholder {
+  float: left;
+  margin: 0 2rem 2rem 0;
+}
+
+/*
+Padding and borders add to the overall size of an object.
+*/
+
+.top-container {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border: 10px solid black;
+  /*
+  Is equivalent to ...
+    border-width: 10px;
+    border-color: black;
+    border-style: solid;
+  */
+  padding: 20px;
+  text-align: right;
+  line-height: 3;
+}
+
+.middle-container {
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  border: 20px solid black;
+  /* 200px + 2 (10px + 20px) */
+  margin-left: 260px; 
+}
+
+.bottom-container {
+  height: 200px;
+  width: 200px;
+  background-color: blue;
+  border: 10px solid black;
+  /* 260px + 200px + 2 (20px) */
+  margin-left: 500px;
+}
+
+.red {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  /*  Is equivalent to...
+  
+  position: relative;
+  left: 200px;
+  */
+  position: relative;
+  display: inline-block;
+  left: 200px;
+  
+}
+
+.blue {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  /* Is equivalent to...
+  
+  position: relative;
+  top: -100px;
+  */
+  position: relative;
+  display: inline-block;
+  left: -100px;
+  
+}
+
+.yellow {
+  height: 100px;
+  width: 100px;
+  background-color: yellow;
+    /* Is equivalent to...
+  
+  position: relative;
+  top: -200px;
+  left: 100px;
+  */
+  position: relative;
+  display: inline-block;
+  left: -100px;
+}
+
+.absolute-container {
+  height: 400px;
+  width: 350px;
+  background-color: gray;
+  position: relative;
+  left: 75px;
+}
+
+.crimson {
+  height: 100px;
+  width: 100px;
+  background-color: crimson;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.navy {
+  height: 100px;
+  width: 100px;
+  background-color: navy;
+  color: white;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.gold {
+  height: 100px;
+  width: 100px;
+  background-color: gold;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#decor {
+  text-decoration: underline;
+}
+
+#banner {
+  background-color: gray;
+}
+
+#styled-hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 10px;
+  width: 10%;
+}
+
+#box-container {
+    height: 250px;
+    background-color: teal;
+    display: flex;
+    /* Default is row but can be column and row-reverse */
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  #box-1 {
+    background-color: blue;
+    width: 25%;
+    height: 50%;
+    
+  }
+
+  #box-2 {
+    background-color: orange;
+    width: 25%;
+    height: 50%;
+    
+  }
+
+  #another-container {
+    background: gray;
+    display: flex;
+    height: 250px;
+    justify-content: space-around;
+  }
+  #box-3 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 100%;
+  }
+
+  #box-4 {
+    background-color: orangered;
+    width: 25%;
+    height: 100%;
+  }
+
+  #box-container1 {
+    background: black;
+    display: flex;
+    height: 150px;
+    align-items: center;
+  }
+
+  #box-5 {
+    background-color: dodgerblue;
+    width: 200px;
+    font-size: 24px;
+  }
+
+  #box-6 {
+    background-color: orangered;
+    width: 200px;
+    font-size: 18px;
+  }
+
+#box-container2 {
+    background: gray;
+    display: flex;
+    height: 300px;
+   flex-wrap: wrap;
+  }
+
+  #box-11 {
+    background-color: dodgerblue;
+    width: 25%;
+    height: 50%;
+  }
+
+  #box-12 {
+    background-color: orangered;
+    width: 25%;
+    height: 50%;
+  }
+  #box-13 {
+    background-color: violet;
+    width: 25%;
+    height: 50%;
+  }
+  #box-14 {
+    background-color: yellow;
+    width: 25%;
+    height: 50%;
+  }
+  #box-15 {
+    background-color: green;
+    width: 25%;
+    height: 50%;
+  }
+  #box-16 {
+    background-color: black;
+    width: 25%;
+    height: 50%;
+  }
+
+#box-container5 {
+    display: flex;
+    height: 300px;
+  }
+  #box-21 {
+    background-color: dodgerblue;
+
+    /* flex shorthand syntax... flex-grow flex-shrink flex-basis */
+    flex: 2 2 150px;
+    height: 200px;
+  }
+
+  #box-22 {
+    background-color: orangered;
+    flex: 1 1 150px;
+    height: 200px;
+}
+
+#box-container6 {
+    display: flex;
+  background-color: gray;
+    height: 300px;
+  }
+
+  #box-31 {
+    background-color: dodgerblue;
+    align-self: center;
+    height: 200px;
+    width: 200px;
+  }
+
+  #box-32 {
+    background-color: orangered;
+    align-self: flex-end;
+    height: 200px;
+    width: 200px;
+  }
+
+.d1{background:LightSkyBlue;}
+.d2{background:LightSalmon;}
+.d3{background:PaleTurquoise;}
+.d4{background:LightPink;}
+.d5{background:PaleGreen;}
+
+.containerd {
+  font-size: 40px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* add your code below this line */
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px;
+  /* grid gap shorthand: row column */
+  grid-gap: 5px 20px;
+  justify-items: center;
+  align-items: start;
+}
+
+.containere {
+    font-size: 40px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    
+    /* fr = fractional unit, % = percentage, auto = auto height/width */
+    grid-template-columns: 1fr 100px 2fr;
+    grid-template-rows: auto 150px;
+  grid-row-gap: 10px;
+}
+
+.item1{background:LightSkyBlue;}
+  .item2{background:LightSalmon;}
+  .item3{background:PaleTurquoise;}
+  .item4{background:LightPink;}
+  
+  .item5 {
+    background: PaleGreen;
+    /* add your code below this line */
+    grid-column: 2 / 4;
+    
+    /* add your code above this line */
+  }
+  
+  .containerg {
+    font-size: 40px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+.item1{background:LightSkyBlue;}
+  .item2 {
+  background:LightSalmon;
+  /* can also use start and end */
+  justify-self: center;
+}
+.item3 { 
+  background:PaleTurquoise;
+  align-self: end;
+}
+.item4{background:LightPink;}
+
+.item5 {
+  background: PaleGreen;
+  /* add your code below this line */
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  /* add your code above this line */
+}
+.item10 {
+  background: DodgerBlue;
+  grid-area: footer;
+}
+.item11{background:LightSkyBlue;}
+.item12{background:LightSalmon;}
+.item13{background:PaleTurquoise;}
+.item14{background:LightPink;}
+
+.item15 {
+  background: PaleGreen;
+  grid-area: content;
+}
+
+.containerh {
+  font-size: 40px;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* repeat(3, 1fr) equivalent to 1fr 1fr 1fr */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-template-areas: 
+    "header header header"
+    "advert content content"
+    "footer footer footer";
+}
+
+.item21{background:LightSkyBlue;}
+.item22{background:LightSalmon;}
+.item23{background:PaleTurquoise;}
+.item24{background:LightPink;}
+
+.item25 {
+  background: PaleGreen;
+  /* grid-area: horizontal line to start at / vertical line to start at / horizontal line to end at / vertical line to end at */
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+.containeri {
+  font-size: 40px;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* minmax -  limit the size of items when the grid container changes size */
+  grid-template-columns: 1fr repeat(2, minmax(300px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.item31{background:LightSkyBlue;}
+.item32{background:LightSalmon;}
+.item33{background:PaleTurquoise;}
+.item34{background:LightPink;}
+.item35{background:PaleGreen;}
+
+.containerj {
+  font-size: 40px;
+  min-height: 100px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  /* If your container can't fit all your items on one row, it will move them down to a new one. */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.containerk {
+  font-size: 40px;
+  min-height: 100px;
+  width: 100%;
+  background: Silver;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.containerm {
+  font-size: 40px;
+  min-height: 100px;
+  width: 100%;
+  background: Silver;
+  display: grid;
+  /* If your container can't fit all your items on one row, it will move them down to a new one. */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.site-item1 {
+  background: LightSkyBlue;
+  grid-area: header;
+}
+
+.site-item2 {
+  background: LightSalmon;
+  grid-area: advert;
+}
+
+.site-item3 {
+  background: PaleTurquoise;
+  grid-area: content;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, auto);
+  grid-template-rows: auto 1fr;
+}
+
+.site-item4 {
+  background: lightpink;
+  grid-area: footer;
+}
+
+.content-header {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.site-itemOne {
+  background: PaleGreen;
+}
+
+.site-itemTwo {
+  background: BlanchedAlmond;
+}
+
+.site-container {
+  font-size: 1.5em;
+  min-height: 300px;
+  width: 100%;
+  background: LightGray;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px auto 1fr auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "header"
+    "advert"
+    "content"
+    "footer";
+}
+
+@media (min-width: 300px){
+  .site-container{
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "advert header"
+      "advert content"
+      "advert footer";
+  }
+}
+
+@media (min-width: 400px){
+  .site-container{
+    /* When the viewport width is 400px or more, make the header area occupy the top row completely and the footer area occupy the bottom row completely */
+    grid-template-areas:
+      "header header"
+      "advert content"
+      "footer footer";
+  }
+}
+
+@media (min-width: 800px) {
+  .site-container {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+ .penguin {
+    
+    /* change code below */
+    --penguin-skin: black;
+    --penguin-belly: gray;
+    --penguin-beak: yellow;
+    /* change code above */
+    
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+  
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+  
+  .right-hand {
+    top: 0%;
+    left: -5%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(45deg);
+    z-index: -1;
+  }
+  
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+  
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+  
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+  
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+  
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;  
+  }
+  
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;  
+  }
+  
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%; 
+  }
+  
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;  
+  }
+  
+  .sparkle {
+    top: 25%;
+    left: 15%;
+    background: white;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;  
+  }
+  
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;  
+  }
+  
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;  
+  }
+  
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;  
+  }
+  
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;  
+  }
+    
+  .penguin * {
+    position: absolute;
+  }
+
+
+.wave3 { 
+            display: inline-block; 
+            width: 100%; 
+            vertical-align: middle; 
+            overflow: hidden; 
+            top: 0; 
+            left: 0; 
+        } 
+
+.container--wave4 {
+  position: relative;
+}
+.wave4 { 
+            position: absolute;
+            display: inline-block; 
+            width: 100%; 
+            vertical-align: middle; 
+            overflow: hidden; 
+            top: 0; 
+            left: 0; 
+        }
