@@ -16,37 +16,55 @@ var home_team_data = {
   team_name: 'Juggernaut',
   srs: 25,
   team_year: 2020,
+  star: 3,
   special_drive_results: [],
   offense: new Set(['Prolific', 'Solid']),
   defense: new Set(['Aggressive', 'Active-Semi', 'Undisciplined']),
   kick_return: 'Electric-Semi',
   punt_return: '',
-  fg_range: '45',
-  xp_range: '65'
+  fg_range: 45,
+  xp_range: 65
 }
 
 var guest_team_data = {
   team_name: 'Cupcake',
   srs: -31,
+  star: 0,
   team_year: 2020,
   special_drive_results: [],
   offense: new Set(['Dull-Semi']),
   defense: new Set(),
   kick_return: '',
   punt_return: '',
-  fg_range: '48',
-  xp_range: '59'
+  fg_range: 48,
+  xp_range: 59
 }
 
 var is_soft = function(team_data) {
-  return team_data['defense'].has(quality.SOFT)
+  return team_data['defense'].has(quality.SOFT);
+}
+
+var has_quality = function(team_obj, prop, value) {
+  return team_obj[prop].has(value);
+}
+
+var gte = function(team_obj, prop, value) {
+  return team_obj[prop] >= value;
 }
 
 var CONDITION_CHECKS = {
   'Soft Defense': {
-      argument: 'defense',
-      action: is_soft
-   }
+      unit: 'defense',
+      func: has_quality,
+      prop: 'defense',
+      value: quality.SOFT
+   },
+  '3-star Offense': {
+      unit: 'offense',
+      func: gte,
+      prop: 'star',
+      value: 3
+   },
 }
 
 var game_book_data = {
@@ -72,7 +90,6 @@ var get_game_drive_result = function(drive_data, lookup_path) {
   var item = lookup_path[0];
   var drive_result = drive_data[item];
   if (lookup_path.length === 1) {
-    console.log(drive_result);
     return drive_result;
   }
   return get_game_drive_result(drive_result, lookup_path.slice(1));
@@ -91,7 +108,7 @@ var call_alert = function(text) {
     alert(text);
 }
 
-var value = dict['argument'];
+var agru = dict['argument'];
 var fun = dict['fun'];
 
 get_game_drive_result(game_book_data, ['1-1-1']);
@@ -101,14 +118,16 @@ var test_game_state = {
    offense: home_team_data,
    defense: guest_team_data
 }
-var current = get_game_drive_result(game_book_data, ['1-1-2', 'false_value']);
+var current = get_game_drive_result(game_book_data, ['1-1-2']);
 var condition = CONDITION_CHECKS[current['condition']];
 
-var action = condition['action'];
-var argument = condition['argument'];
-var result = action(test_game_state[argument])
+var func = condition['func'];
+var unit = condition['unit'];
+var prop = condition['prop'];
+var value = condition['value'];
+var result = func(test_game_state[unit], prop, value);
 console.log(result.toString()+'_value');
 
-window[fun](value);
+window[fun](agru);
 </script>
 </html>
