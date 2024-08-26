@@ -1,0 +1,114 @@
+<html>
+<head>
+
+</head>
+<body>
+<h1>Demo of mapp and functions</h1>
+</body>
+<script>
+var quality = {
+  SOFT: 'SOFT'
+}
+
+
+
+var home_team_data = {
+  team_name: 'Juggernaut',
+  srs: 25,
+  team_year: 2020,
+  special_drive_results: [],
+  offense: new Set(['Prolific', 'Solid']),
+  defense: new Set(['Aggressive', 'Active-Semi', 'Undisciplined']),
+  kick_return: 'Electric-Semi',
+  punt_return: '',
+  fg_range: '45',
+  xp_range: '65'
+}
+
+var guest_team_data = {
+  team_name: 'Cupcake',
+  srs: -31,
+  team_year: 2020,
+  special_drive_results: [],
+  offense: new Set(['Dull-Semi']),
+  defense: new Set(),
+  kick_return: '',
+  punt_return: '',
+  fg_range: '48',
+  xp_range: '59'
+}
+
+var is_soft = function(team_data) {
+  return team_data['defense'].has(quality.SOFT)
+}
+
+var CONDITION_CHECKS = {
+  'Soft Defense': {
+      argument: 'defense',
+      action: is_soft
+   }
+}
+
+var game_book_data = {
+  '1-1-1': { result: 'Punt'},
+  '1-1-2': {
+    condition: '3-star Offense',
+    true_value: {
+      result: 'TD Run[P]'
+    },
+    false_value: {
+      condition: 'Soft Defense',
+      true_value: {
+        result: 'Punt-CO'
+      },
+      false_value: {
+        result: 'Punt'
+      }
+    }
+  }
+}
+
+var get_game_drive_result = function(drive_data, lookup_path) {
+  var item = lookup_path[0];
+  var drive_result = drive_data[item];
+  if (lookup_path.length === 1) {
+    console.log(drive_result);
+    return drive_result;
+  }
+  return get_game_drive_result(drive_result, lookup_path.slice(1));
+}
+
+var execute_game_drive = function(game_book, game_state) {
+  return
+}
+
+var dict = {
+  argument: 'Hello',
+  fun: 'call_alert'
+}
+
+var call_alert = function(text) {
+    alert(text);
+}
+
+var value = dict['argument'];
+var fun = dict['fun'];
+
+get_game_drive_result(game_book_data, ['1-1-1']);
+get_game_drive_result(game_book_data, ['1-1-2']);
+
+var test_game_state = {
+   offense: home_team_data,
+   defense: guest_team_data
+}
+var current = get_game_drive_result(game_book_data, ['1-1-2', 'false_value']);
+var condition = CONDITION_CHECKS[current['condition']];
+
+var action = condition['action'];
+var argument = condition['argument'];
+var result = action(test_game_state[argument])
+console.log(result.toString()+'_value');
+
+window[fun](value);
+</script>
+</html>
